@@ -30,7 +30,9 @@ public class Student extends Person implements Observer{
 
     @Override
     public String introduce() {
-        if (this.klass!= null){
+        if (this.klass!= null && klass.isLeader(this)) {
+            return super.introduce() + " I am a student. I am the leader of class " + klass.getId() + ".";
+        } else if (this.klass!= null){
             return super.introduce()+String.format(" I am a student. I am in class %d.",this.klass.getId());
         }
         return super.introduce()+" I am a student.";
