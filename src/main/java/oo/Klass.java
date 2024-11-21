@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Klass {
+    public static final String IT_IS_NOT_ONE_OF_US = "It is not one of us.";
     private int id;
     private Student leader;
     private List<Student> studentList;
@@ -44,7 +45,7 @@ public class Klass {
 
     public void assignLeader(Student student) {
         if (student.getKlass() != this) {
-            System.out.println("It is not one of us.");
+            System.out.println(IT_IS_NOT_ONE_OF_US);
         } else {
             this.leader = student;
             notifyObservers();
