@@ -1,6 +1,6 @@
 package oo;
 
-public class Student extends Person{
+public class Student extends Person implements Observer{
     private Klass klass;
 
     public Klass getKlass() {
@@ -34,5 +34,12 @@ public class Student extends Person{
             return super.introduce()+String.format(" I am a student. I am in class %d.",this.klass.getId());
         }
         return super.introduce()+" I am a student.";
+    }
+
+    @Override
+    public void notify(String leaderName) {
+        if (!this.getName().equals(leaderName)) {
+            System.out.printf("I am %s, student of Class %d. I know %s become Leader.%n", this.getName(), this.getKlass().getId(), leaderName);
+        }
     }
 }
