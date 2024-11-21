@@ -8,6 +8,22 @@ public class Person {
     private int age;
     private Klass klass;
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public Klass getKlass() {
+        return klass;
+    }
+
     public Person(int id, String name, int age) {
         this.id = id;
         this.name = name;

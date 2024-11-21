@@ -7,6 +7,6 @@ public class Student extends Person{
 
     @Override
     public String introduce() {
-        return super.introduce()+" I am a student.";
+        return super.introduce()+String.format(" I am a student. I am in class %d.",super.getKlass().getId());
     }
 }
