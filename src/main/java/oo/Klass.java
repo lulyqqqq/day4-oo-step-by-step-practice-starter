@@ -5,7 +5,6 @@ import java.util.Objects;
 public class Klass {
     private int id;
     private Student leader;
-    private Student student;
 
     public Klass(int id) {
         this.id = id;
@@ -18,7 +17,6 @@ public class Klass {
     public void setId(int id) {
         this.id = id;
     }
-
 
     public void assignLeader(Student student) {
         if (student.getKlass() != this) {
