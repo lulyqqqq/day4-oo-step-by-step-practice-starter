@@ -3,13 +3,9 @@ package oo;
 public class Student extends Person{
     private Klass klass;
 
-    public Klass getKlass() {
-        return klass;
-    }
     public Student(int id, String name, int age) {
         super(id, name, age);
     }
-
 
     public boolean isIn(Klass klass){
         if (this.klass == null){
@@ -17,6 +13,7 @@ public class Student extends Person{
         }
         return this.klass.getId() == klass.getId();
     }
+
     public void join(Klass klass){
         if (klass != null){
             this.klass = klass;
@@ -25,6 +22,6 @@ public class Student extends Person{
 
     @Override
     public String introduce() {
-        return super.introduce()+String.format(" I am a student. I am in class %d.",getKlass().getId());
+        return super.introduce()+String.format(" I am a student. I am in class %d.",this.klass.getId());
     }
 }
