@@ -24,7 +24,11 @@ public class Person {
         }
         return this.klass.getId() == klass.getId();
     }
-
+    public void join(Klass klass){
+        if (klass != null){
+            this.klass = klass;
+        }
+    }
 
     @Override
     public boolean equals(Object person) {
