@@ -36,7 +36,7 @@ public class PersonTest {
         Person person1 = new Person(1, "Tom", 18);
         Person person2 = new Person(2, "Tom", 18);
 
-        assertThat(person1.getId()).isNotEqualTo(person2.getId());
+        assertThat(person1).isNotEqualTo(person2);
     }
 
 }
