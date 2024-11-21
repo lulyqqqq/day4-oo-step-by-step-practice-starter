@@ -6,23 +6,7 @@ public class Person {
     private int id;
     private String name;
     private int age;
-    private Klass klass;
 
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public Klass getKlass() {
-        return klass;
-    }
 
     public Person(int id, String name, int age) {
         this.id = id;
@@ -34,17 +18,6 @@ public class Person {
         return String.format("My name is %s. I am %d years old.", name, age);
     }
 
-    public boolean isIn(Klass klass){
-        if (this.klass == null){
-            return false;
-        }
-        return this.klass.getId() == klass.getId();
-    }
-    public void join(Klass klass){
-        if (klass != null){
-            this.klass = klass;
-        }
-    }
 
     @Override
     public boolean equals(Object person) {

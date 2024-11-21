@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Klass {
     private int id;
+    private Student student;
 
     public Klass(int id) {
         this.id = id;
